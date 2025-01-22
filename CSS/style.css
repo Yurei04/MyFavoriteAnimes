@@ -1,13 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Noto+Serif+JP:wght@200..900&family=Zilla+Slab:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
 
 :root {
-    --primary-color-violet: #0000;
-    --primary-subset-color-violet: #0000;
-    --secondary-color-violet: #0000;
-    --secondary-subset-color-violet: #0000;
+    --primary-color-violet: #000000;
+    --primary-subset-color-violet: #000000;
+    --secondary-color-violet: #000000;
+    --secondary-subset-color-violet: #000000;
 
 
     --primary-color-violet-text: #ffffff;
+    --secondary-color-violet-text: #000000;
     --primary-font: "Noto Serif JP", serif;
     --letter-font: "Great Vibes", serif;
     --secondary-font: "Zilla Slab", serif;
@@ -27,6 +28,14 @@ a {
     color: var(--primary-color-violet-text);
 }
 
+ul {
+    list-style: none;
+}
+
+h1 {
+    font-family: var(--primary-font);
+}
+
 body {
     overflow-x: hidden;
     background-color: black;
@@ -36,28 +45,74 @@ body {
     font-family: var(--primary-font);
 }
 
-.homepage-wrapper, .base-wrapper  {
-    margin: 0;
+.homepage-wrapper, .about-container, .episodes-container, .letters-container  {
     padding: 5px;
     height: 100vh;
     width: 100%;
     align-items: center;
     justify-content: center;
     display: flex;
+    flex-direction: column;
 }
+
+.homepage-wrapper {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background:linear-gradient(to bottom, rgba(62, 66, 0, 0.445), rgb(0, 0, 0)), url('../Components/images/bkg1.jpg');
+}
+
+.homepage-container {
+    text-align: center;
+    position: relative;
+    top: -5rem;
+}
+
+
+.homepage-container a {
+    border: 1px solid white;
+    padding: 8px;
+    margin: 5px;
+    border-radius: 6px;
+}
+
+.homepage-container a:hover {
+    background-color: var(--secondary-color-violet);
+    transition: 0.2s ease-in-out;
+}
+
 
 .letters-modal {
     display: hidden;
 }
 
+.about-container p{
+    width: 60%;
+    font-family: var(--secondary-font);
+    font-size: larger;
+    text-align: justify;
+    font-stretch: expanded;
+}
+
+.capsule {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
 @media screen and (max-width: 768px) {
-    .homepage-wrapper, .base-wrapper  {
-        margin: 0;
-        padding: 2px;
+    .homepage-wrapper, .about-container, .episodes-container, .letters-container  {
+        margin: 5px;
+        padding: 5px;
         height: 100lvh;
         width: 100%;
         align-items: center;
         justify-content: center;
-        display: flex;
+    }
+
+    .capsule {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
     }
 }
