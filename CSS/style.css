@@ -63,6 +63,7 @@ body {
 }
 
 .homepage-container {
+    z-index: 10;
     text-align: center;
     position: relative;
     top: -5rem;
@@ -72,17 +73,26 @@ body {
 .homepage-container a {
     border: 1px solid white;
     padding: 8px;
-    margin: 5px;
     border-radius: 6px;
 }
 
 .homepage-container h1 {
-    font-size: 200px;
+    font-size: 60px;
+    text-shadow: rgba(255,208,0,0.71) 0px 0px 59px;
+
+}
+
+.homepage-container h4 {
+    text-shadow: rgba(255,208,0,0.71) 0px 0px 59px;
+
 }
 
 .homepage-container a:hover {
     background-color: var(--secondary-color-violet);
     transition: 0.2s ease-in-out;
+    -webkit-box-shadow:0px 0px 167px 10px rgba(255, 189, 96, 0.693);
+    -moz-box-shadow: 0px 0px 167px 10px rgba(255, 189, 96, 0.693);
+    box-shadow: 0px 0px 167px 10px rgba(255, 189, 96, 0.693);
 }
 
 
@@ -104,6 +114,78 @@ body {
     grid-template-rows: 1fr 1fr;
 }
 
+.papers {
+    position: absolute;
+    z-index: 1;
+}
+
+.papers img{
+    height: 10rem;
+    width: 10rem;
+    padding: 5px;
+    margin: 5px;
+}
+
+#paper1 {
+
+    position: relative;
+    top: -200px;
+    left: 1000px;
+    filter: drop-shadow(20px 23px 23px #000000);
+}
+
+#paper2 {
+    position: relative;
+    top: 180px;
+    left: -350px;
+    filter: drop-shadow(-24px 23px 23px #000000);
+
+}
+#paper3 {
+    position: relative;
+    top: 100px;
+    left: 730px;
+    filter: drop-shadow(34px 23px 23px #000000);
+}
+
+#paper4 {
+    position: relative;
+    top: -50px;
+    left: -750px;
+    filter: drop-shadow(-24px 23px 23px #000000);
+}
+
+#paper5 {
+    position: relative;
+    top: 250px;
+    left: -780px;
+    filter: drop-shadow(-24px 23px 23px #000000);
+}
+
+#paper6 {
+    position: relative;
+    top: 150px;
+    filter: drop-shadow(34px 23px 23px #000000);
+}
+
+.episodes-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    margin: 20px;
+}
+
+.episodes {
+    margin: 10px;
+    border: 1px solid white;
+    border-radius: 12px;
+    height: 200px;
+    width: 400px;
+}
+
 @media screen and (max-width: 768px) {
     .homepage-wrapper, .about-container, .episodes-container, .letters-container  {
         margin: 5px;
@@ -119,4 +201,13 @@ body {
         grid-template-columns: 1fr;
         grid-template-rows: 1fr;
     }
+
+    .episodes-section {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        align-items: center;
+        justify-content: center;
+    }
 }
+
