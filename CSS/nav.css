@@ -67,3 +67,34 @@
 .nav-link:hover span::after {
     width: 100%;
 }
+
+@media screen and (max-width: 1080px) {
+    .nav-container {
+        max-width: 60%;
+    }
+
+    .nav-list {
+        display: flex;
+        flex-direction: row;
+        gap: 2rem;
+    }
+    
+}
+
+
+@media screen and (max-width: 700px) {
+    .nav-container {
+        max-width: 40%;
+    }
+
+    .nav-list {
+        display: flex;
+        flex-direction: row;
+        gap: 2rem;
+    }
+
+    .slides.fade {
+        background-attachment: scroll; 
+    }
+    
+}
