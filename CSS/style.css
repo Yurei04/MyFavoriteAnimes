@@ -37,6 +37,7 @@ h1 {
 }
 
 body {
+    height: 100vh;
     overflow-x: hidden;
     background-color: black;
     color: var(--primary-color-violet-text);
@@ -54,6 +55,7 @@ body {
     justify-content: center;
     display: flex;
     flex-direction: column;
+    transition: 0.5s ease-in-out;
 }
 
 .homepage-wrapper {
@@ -236,9 +238,11 @@ body {
 
 @media screen and (max-width: 768px) {
     .homepage-wrapper, .about-container, .episodes-container, .letters-container  {
-        margin: 5px;
-        padding: 5px;
-        height: 100lvh;
+        position: relative;
+        margin: 20px;
+        padding: 15px;
+        max-height: 200lvh;
+        min-height: 100lvh;
         width: 100%;
         align-items: center;
         justify-content: center;
@@ -249,7 +253,7 @@ body {
     .capsule {
         display: grid;
         grid-template-columns: 1fr;
-        grid-template-rows: 1fr;
+        grid-template-rows: auto;
     }
 
     .episodes-section {

@@ -35,3 +35,21 @@ document.addEventListener('DOMContentLoaded', function () {
     show_slides();
     setInterval(show_slides, 5000); 
 });
+
+document.addEventListener('DOMContentLoaded', function () {
+    const divs = document.querySelectorAll('.about-container, .episodes-container, .letters-container');
+
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.opacity = 1; 
+            } else {
+                entry.target.style.opacity = 0; 
+            }
+        });
+    }, { threshold: 0.2 });
+
+    divs.forEach(div => {
+        observer.observe(div);
+    });
+});
