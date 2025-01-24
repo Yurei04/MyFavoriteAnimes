@@ -61,10 +61,11 @@ body {
 }
 
 .homepage-wrapper {
+    background-attachment: scroll;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    background:linear-gradient(to bottom, rgba(62, 66, 0, 0.445), rgb(0, 0, 0)), url('../Components/images/bkg1.jpg');
+    background:linear-gradient(to bottom, rgba(151, 126, 3, 0.445), rgb(0, 0, 0)), url('../Components/images/bkg1.jpg');
 }
 
 .homepage-container {
@@ -83,12 +84,12 @@ body {
 
 .homepage-container h1 {
     font-size: 60px;
-    text-shadow: rgba(255,208,0,0.71) 0px 0px 59px;
+    text-shadow: var(--primary-color-violet) 0px 0px 59px;
 
 }
 
 .homepage-container h4 {
-    text-shadow: rgba(255,208,0,0.71) 0px 0px 59px;
+    text-shadow: var(--primary-color-violet) 0px 0px 59px;
 
 }
 
@@ -120,11 +121,30 @@ body {
 }
 
 .letter {
+    cursor: pointer;
     border: 1px solid var(--secondary-color-violet);
-    border-radius: 12px;
+    border-radius: 14px;
     height: 150px;
     width: 250px;
     margin: 20px;
+    -webkit-box-shadow:0px 0px 27px 1px var(--primary-color-violet);
+    -moz-box-shadow: 0px 0px 27px 2px var(--primary-color-violet);
+    box-shadow: 0px 0px 27px 1px var(--primary-color-violet);
+    transition: 0.3s ease-in-out;
+}
+
+.letter img {
+    border-radius: 12px;
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+}
+
+.letter:hover {
+    scale: 1.05;
+    -webkit-box-shadow:0px 0px 37px 10px var(--primary-color-violet);
+    -moz-box-shadow: 0px 0px 37px 10px var(--primary-color-violet);
+    box-shadow: 0px 0px 37px 10px var(--primary-color-violet);
 }
 
 .papers {
@@ -254,6 +274,51 @@ body {
     75% { opacity: 1; }
     100% { opacity: 0; }
 
+}
+
+@media screen and (max-width: 1080px) {
+    #paper1 {
+        position: relative;
+        top: 0;
+        left: 1000px;
+        filter: drop-shadow(20px 23px 23px var(--secondary-subset-color-violet));
+    }
+    
+    #paper2 {
+        position: relative;
+        top: 0;
+        left: -350px;
+        filter: drop-shadow(-24px 23px 23px var(--secondary-subset-color-violet));
+    
+    }
+    #paper3 {
+        position: relative;
+        top: 100px;
+        left: 730px;
+        filter: drop-shadow(34px 23px 23px var(--secondary-subset-color-violet));
+    }
+    
+    #paper4 {
+        position: relative;
+        top: 100px;
+        left: 250px;
+        filter: drop-shadow(-24px 23px 23px var(--secondary-subset-color-violet));
+    }
+    
+    #paper5 {
+        position: relative;
+        top: 100px;
+        left: -780px;
+        filter: drop-shadow(-24px 23px 23px var(--secondary-subset-color-violet));
+    }
+    
+    #paper6 {
+        position: relative;
+        top: 100px;
+        left: 750px;
+        filter: drop-shadow(34px 23px 23px var(--secondary-subset-color-violet));
+    }
+    
 }
 
 
